@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nós</title>
+    
+    <link rel="icon" type="image/x-icon" sizes="64x64" href="../css/1000316456-removebg-preview.ico">
+    <style>
+        
+body {
+    background-image: url('https://img.itch.zone/aW1hZ2UvMjI0MTAzLzEwNTgyMjkucG5n/original/gaERSZ.png');
+    background-size: cover;
+    
+    background-position: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+   
+    margin: 0;
+    height: 70vh;
+    padding-bottom: 200px;
+    
+}
+        .gif-stack {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            align-items: flex-end;
+            z-index: 1000;
+        }
+        .gif-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .gif-label {
+            font-size: 12px;
+            color: #fff;
+            background: rgba(0,0,0,0.55);
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+        .gif-stack img {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 50%;
+            display: block;
+            transition: filter 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+            cursor: pointer;
+        }
+        .gif-item:hover img {
+            
+            transform: scale(1.02);
+        }
+        .gif-item:nth-child(1) img:hover {
+            filter: drop-shadow(0 0 10px rgb(0, 255, 213));
+        }
+        .gif-item:nth-child(2) img:hover {
+            filter: drop-shadow(0 0 10px #7700ffb3);
+        }
+        .gif-item:nth-child(3) img:hover {
+            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7));
+            
+        }
+        .gif-item:nth-child(4) img:hover {
+            filter: drop-shadow(0 0 15px rgba(1, 238, 255, 0.7));
+            
+        }
+         .gif-item:nth-child(5) img:hover {
+            filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.7));
+            
+        }
+        .gif-tooltip {
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.85);
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+            font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 150ms ease, visibility 150ms ease;
+            pointer-events: none;
+        }
+        .gif-item:hover .gif-tooltip {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    
+        <h1 style="color: #ffffff;font-family: 'operator mono', monospace;">Sobre nós:</h1>
+    
+  
+
+    <div class="gif-stack">
+        <div class="gif-item">
+            <div class="gif-label">Pedro</div>
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG5mc3dlMzhuc29wazEydnlmdG9tdGxrMWMybnRjaTV0aDc3cnE4YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gUNA7QH4AeLde/giphy.gif" alt="GIF esquerdo">
+            <div class="gif-tooltip" role="tooltip">Pedro....</div>
+        </div>
+        <div class="gif-item">
+            <div class="gif-label">Yassun</div>
+            <img src="https://www.fansub.tv/media/komi-san-chibi-gif.2060/full" alt="Komi-san chibi">
+            <div class="gif-tooltip" role="tooltip">adora bolo e estudar.</div>
+        </div>
+        <div class="gif-item">
+            <div class="gif-label">Solr</div>
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUycGxpOTd5cG9tOGRqb3l1YTZsYTZqZm11OGJzdWdoYnZ1NTQwaDV2cyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/8nH6xtdefALrKslyrj/200.gif" alt="GIF adicional">
+            <div class="gif-tooltip" role="tooltip">Viciado em tocar guitarra.</div>
+        </div>
+        <div class="gif-item">
+            <div class="gif-label">DarkG404</div>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/42d4387e-147c-4fd1-884a-465a98d35c02/damitxa-7757bf86-9d3f-45ac-b5cb-3ecb2fcc8102.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi80MmQ0Mzg3ZS0xNDdjLTRmZDEtODg0YS00NjVhOThkMzVjMDIvZGFtaXR4YS03NzU3YmY4Ni05ZDNmLTQ1YWMtYjVjYi0zZWNiMmZjYzgxMDIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yS6G8IVlJdqG7E8naeI970xtPJNNkjLqwleIj7HLf4Y" alt="GIF dino">
+            <div class="gif-tooltip" role="tooltip">Desenha Muito e gosta de jogar.</div>
+        </div>
+        <div class="gif-item">
+            <div class="gif-label">Anna</div>
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGloaWR3YnNyMDRmdDNzODhkMWliczJ2Nnl4MXhhZjFjMjVkYjJiYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/QXz8e8IOyi6C24iyY7/giphy.gif" alt="GIF extra">
+            <div class="gif-tooltip" role="tooltip">é o batman e tira fotos.</div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+
+</html>
