@@ -4,9 +4,19 @@ const backgrounds = [
     'Criatura cibernética em código verde.png',
     'eletronica.jpg',
     'bg3.jpg',
-    'bg4.jpg',
+    'languages.jpg',
     'Artificial.jpg',
     'bg6.jpg'
+];
+
+
+const audios = [
+    'logica_voice.mp3',
+    'eletro_voice.mp3',
+    '_voice.mp3',
+    'languages_voice.mp3',  // Adicione um arquivo de áudio para o quarto background
+    'arificial_voice.mp3',
+    'audio6.mp3'   // Adicione um arquivo de áudio para o sexto background
 ];
 
 // initialize current index
@@ -18,7 +28,7 @@ const cssFiles = [
     'lógica.css',        // 0
     'eletro.css',   // 1
     'style-alt2.css',   // 2
-    'style-alt3.css',   // 3
+    'languages.css',   // 3
     'artificial.css',   // 4
     'style-alt5.css'    // 5
 ];
@@ -38,7 +48,7 @@ const themeContent = {
         paragraph: "Adicione o texto para o tema 3 aqui."
     },
     3: {
-        title: "tema 4",
+        title: "Languages",
         paragraph: "Adicione o texto para o tema 4 aqui."
     },
     4: {
@@ -55,6 +65,12 @@ const themeContent = {
 const scene = document.querySelector('.scene');
 const buttons = document.querySelectorAll('.controls button');
 const styleLink = document.getElementById('pagestyle');  // ver HTML atualizado abaixo
+const playAudioBtn = document.querySelector('.play-button');
+const audioElement = document.getElementById('background-audio');
+let playing = false;
+
+console.log('playAudioBtn encontrado:', playAudioBtn);
+console.log('audioElement encontrado:', audioElement);
 
 function updateBackground(index) {
     if (index < 0 || index >= backgrounds.length) return;
@@ -86,6 +102,18 @@ function updateBackground(index) {
     buttons.forEach(btn => {
         btn.classList.toggle('active', parseInt(btn.dataset.index, 10) === current);
     });
+
+    // If audio is playing, switch to the new audio
+    if (playing) {
+        const newAudioSrc = audios[current];
+        console.log('Mudando para novo áudio:', newAudioSrc);
+        audioElement.src = newAudioSrc;
+        audioElement.play().then(() => {
+            console.log('Novo áudio começou a tocar');
+        }).catch(error => {
+            console.error('Erro ao tocar novo áudio:', error);
+        });
+    }
 }
 
 // attach event listeners
@@ -98,21 +126,24 @@ buttons.forEach(btn => {
 // set initial
 updateBackground(0);
 
-// play/pause slideshow
-const playBtn = document.querySelector('.play-button');
-let playing = false;
-let intervalId = null;
-
-if (playBtn) {
-  playBtn.addEventListener('click', () => {
+// play/pause audio for current background
+if (playAudioBtn) {
+  playAudioBtn.addEventListener('click', () => {
+    console.log('Botão play clicado, current:', current, 'playing:', playing);
     if (playing) {
-      clearInterval(intervalId);
-      playBtn.textContent = '▶';
+      audioElement.pause();
+      playAudioBtn.textContent = '▶';
+      console.log('Áudio pausado');
     } else {
-      intervalId = setInterval(() => {
-        updateBackground((current + 1) % backgrounds.length);
-      }, 3000);
-      playBtn.textContent = '❚❚';
+      const audioSrc = audios[current];
+      console.log('Tentando tocar áudio:', audioSrc);
+      audioElement.src = audioSrc;
+      audioElement.play().then(() => {
+        console.log('Áudio começou a tocar');
+      }).catch(error => {
+        console.error('Erro ao tocar áudio:', error);
+      });
+      playAudioBtn.textContent = '❚❚';
     }
     playing = !playing;
   });
