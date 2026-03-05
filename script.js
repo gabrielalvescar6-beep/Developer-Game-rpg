@@ -15,8 +15,8 @@ const audios = [
     'eletro_voice.mp3',
     '_voice.mp3',
     'languages_voice.mp3',  // Adicione um arquivo de áudio para o quarto background
-    'arificial_voice.mp3',
-    'audio6.mp3'   // Adicione um arquivo de áudio para o sexto background
+    'artificial_voice.mp3',
+    'artificial_voice.mp3'   // Adicione um arquivo de áudio para o sexto background
 ];
 
 // initialize current index
@@ -66,7 +66,14 @@ const scene = document.querySelector('.scene');
 const buttons = document.querySelectorAll('.controls button');
 const styleLink = document.getElementById('pagestyle');  // ver HTML atualizado abaixo
 const playAudioBtn = document.querySelector('.play-button');
-const audioElement = document.getElementById('background-audio');
+// try to grab an existing audio element; if it doesn't exist create one so code doesn't break
+let audioElement = document.getElementById('background-audio');
+if (!audioElement) {
+    console.warn('Nenhum elemento <audio> encontrado, criando dinamicamente.');
+    audioElement = document.createElement('audio');
+    audioElement.id = 'background-audio';
+    document.body.appendChild(audioElement);
+}
 let playing = false;
 
 console.log('playAudioBtn encontrado:', playAudioBtn);
