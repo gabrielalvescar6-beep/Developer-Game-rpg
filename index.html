@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Realms</title>
-    <link id="pagestyle" rel="stylesheet" href="lógica.css">
+    <link id="pagestyle" rel="stylesheet" href="css/lógica.css">
     <link rel="shortcut icon" href="image-removebg-preview.ico" type="image/x-icon">
 </head>
 <body>
@@ -32,6 +32,9 @@
     </header>
 
     <div class="scene">
+        <!-- elemento de vídeo para fundos em video -->
+        <video id="background-video" autoplay muted loop></video>
+        
         <!-- a imagem de fundo é definida via CSS -->
         <div class="overlay">
             <div class="text">
@@ -46,11 +49,11 @@
             <button data-index="2">3</button>
             <button data-index="3">4</button>
             <button data-index="4">5</button>
-            <button data-index="5">6</button>
+    
         </div>
         <button class="play-button">▶</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
