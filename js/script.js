@@ -41,7 +41,7 @@ const cssFiles = [
 const themeContent = {
     0: {
         title: "programming <br> logic",
-        paragraph: "A logica e uma força implacavel, uma muralha de codigo construida para te cacar. <br> Seus algoritmos sao sentenças de morte; suas sequências, um caminho para a aniquilaçao total.Tente decifra-la... ou seja deletado."
+        paragraph: "A lógica e uma força implacável, uma muralha de código construida para te caçar. <br> Seus algoritmos são sentenças de morte; suas sequências, um caminho para a aniquilação total. Tente decifrá-la... ou seja DELETADO."
     },
     1: {
         title: "electronics",
