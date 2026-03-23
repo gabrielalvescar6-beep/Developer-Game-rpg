@@ -43,6 +43,23 @@ body{
     height: 40px;
 }
 
+#reg:hover {
+
+text-decoration: underline;
+}
+
+#hist:hover {
+    text-decoration: underline;
+}
+
+#sobre:hover {
+text-decoration: underline;
+}
+
+#config:hover {
+text-decoration: underline;    
+}
+
 nav.menu ul {
     display: flex;
     gap: 20px;
