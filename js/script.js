@@ -5,7 +5,7 @@ const backgrounds = [
     'assets/images/eletronica.jpg',
     'assets/images/Banco.jpg',
     'assets/videos/language.mp4', 
-    'assets/images/Artificial.jpg',
+    'assets/images/Artificial.png',
     'bg6.jpg'
 ];
 
