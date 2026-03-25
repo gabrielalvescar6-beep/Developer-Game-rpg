@@ -200,5 +200,10 @@ if (playAudioBtn) {
   });
 }
 
-// menu mobile toggle removido - menu agora é sidebar fixa
+// Topbar toggle - main button + return button
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.topbar-toggle');
+    const topbar = document.querySelector('.topbar');
+    toggle.addEventListener('click', () => topbar.classList.toggle('hidden'));
+});
 
