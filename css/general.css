@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'font_menu';
-    src: url('../fonts/font_menu.woff2') format('woff2'),
-         url('../fonts/font_menu.woff') format('woff'),
-         url('../fonts/font_menu.ttf') format('truetype');
+    src: url('../fonts/font_menu.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -262,4 +260,18 @@ nav.menu ul.open {
     background: rgba(255, 230, 0, 1);
     color: #000;
     border-color: #fff;
+}
+
+#reg:hover {
+    text-decoration: underline ;
+
+}
+#config:hover {
+    text-decoration: underline;
+}
+#hist:hover {
+    text-decoration: underline;
+}
+#sobre :hover {
+    text-decoration: underline;
 }
