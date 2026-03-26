@@ -21,88 +21,95 @@ body {
     padding-bottom: 200px;
     
 }
-        .gif-stack {
-            position: fixed;
-            bottom: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            align-items: flex-end;
-            z-index: 1000;
-            
-        }
-        .gif-item {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            bottom: 130px;
-            
-        }
 
-       
-        .gif-label {
-            font-size: 12px;
-            color: #fff;
-            background: rgba(0,0,0,0.55);
-            padding: 4px 8px;
-            border-radius: 6px;
+  .gif-stack {
+    position: fixed;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    z-index: 1000;
+}
 
-        }
-        .gif-stack img {
-            width: 250px;
-            height: 250px;
-            object-fit: contain;
-            border-radius: 50%;
-            display: block;
-            transition: filter 200ms ease, box-shadow 200ms ease, transform 200ms ease;
-            cursor: pointer;
-        }
-        .gif-item:hover img {
-            
-            transform: scale(1.02);
-        }
-        .gif-item:nth-child(1) img:hover {
-            filter: drop-shadow(0 0 10px rgb(0, 255, 213));
-        }
-        .gif-item:nth-child(2) img:hover {
-            filter: drop-shadow(0 0 10px #7700ffb3);
-        }
-        .gif-item:nth-child(3) img:hover {
-            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7));
-            
-        }
-        .gif-item:nth-child(4) img:hover {
-            filter: drop-shadow(0 0 15px rgba(1, 238, 255, 0.7));
-            
-        }
-         .gif-item:nth-child(5) img:hover {
-            filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.7));
-            
-        }
-        .gif-tooltip {
-            position: absolute;
-            bottom: calc(100% + 8px);
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.85);
-            color: #fff;
-            padding: 6px 10px;
-            border-radius: 6px;
-            white-space: nowrap;
-            font-size: 12px;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 150ms ease, visibility 150ms ease;
-            pointer-events: none;
-        }
-        .gif-item:hover .gif-tooltip {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
+.gif-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.gif-label {
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0,0,0,0.55);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.gif-stack img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    transition: filter 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+    cursor: pointer;
+}
+
+
+.gif-item:nth-child(3) {
+    transform: translateY(35px);
+}
+
+.gif-item:hover img {
+    transform: scale(1.02);
+}
+
+.gif-item:nth-child(1) img:hover {
+    filter: drop-shadow(0 0 10px rgb(0, 255, 213));
+}
+
+.gif-item:nth-child(2) img:hover {
+    filter: drop-shadow(0 0 10px #7700ffb3);
+}
+
+.gif-item:nth-child(3) img:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7));
+}
+
+.gif-item:nth-child(4) img:hover {
+    filter: drop-shadow(0 0 15px rgba(1, 238, 255, 0.7));
+}
+
+.gif-item:nth-child(5) img:hover {
+    filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.7));
+}
+
+.gif-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 150ms ease, visibility 150ms ease;
+    pointer-events: none;
+}
+
+.gif-item:hover .gif-tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
     </style>
 </head>
 <body>
@@ -146,7 +153,7 @@ body {
     <style>a { background-color: rgba(0, 0, 0, 0.911);; color: #ffffff; font-size: larger;
      padding: 10px 17px; text-decoration: none;
       border-radius: 100%; transition: background-color 0.3s ease;
-         display: inline-block; margin-top: 10%; margin-right: 95%;
+         position: fixed; top: 20px; left: 20px; z-index: 1000;
          border:  3px solid #d8b101cc;
     }
        a:hover { background-color: rgba(228, 215, 116, 0.8);; }</style>
