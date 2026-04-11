@@ -48,12 +48,13 @@ const themeContent = {
         paragraph: "Circuitos que pulsam com energia, máquinas que respiram código binário, sinais que atravessam o vazio. A eletrônica é o pulso do universo digital."
     },
     2: {
-        title: "tema 3",
-        paragraph: "Adicione o texto para o tema 3 aqui."
+        title: "Database",
+        paragraph: "Nas profundezas de um siatema, existe um lugar corrompido e infinito, onde os dados se acumulam como um mar de informações esquecidaas... onde não existe uma saída..."
+
     },
     3: {
         title: "Languages",
-        paragraph: "Adicione o texto para o tema 4 aqui."
+        paragraph: "Nas origens do código surgiu uma quimera de palavras e símbolos impossíveis, uma linguagem primordial que moldou a realidade digital. Ela é a essência da comunicação entre humanos e máquinas, um idioma indecifravel em uma colmeia de pensamentos."
     },
     4: {
         title: "Cogito ergo sum",
